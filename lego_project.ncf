@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nios2_config version="1.0">
+    <system>
+        <system_info filepath="true">..\11.1\University_Program\NiosII_Computer_Systems\DE2\DE2_Media_Computer\verilog\nios_system.ptf</system_info>
+        <sample_system_title>DE2 Media Computer</sample_system_title>
+        <system_sof filepath="true">..\11.1\University_Program\NiosII_Computer_Systems\DE2\DE2_Media_Computer\verilog\DE2_Media_Computer.sof</system_sof>
+        <system_jdi filepath="true"/>
+        <cable>USB-Blaster [USB-0]</cable>
+        <processor JTAGHubInstanceID="0">CPU</processor>
+        <elf_section name="text">
+            <memory_device>SDRAM/s1</memory_device>
+            <memory_start_offset>1024</memory_start_offset>
+        </elf_section>
+        <elf_section name="data">
+            <memory_device>SDRAM/s1</memory_device>
+            <memory_start_offset>1024</memory_start_offset>
+        </elf_section>
+        <terminal JTAGHubInstanceID="0">JTAG_UART</terminal>
+    </system>
+    <program>
+        <type>C</type>
+        <options>
+            <source_files>
+                <source_file filepath="true">board.s</source_file>
+                <source_file filepath="true">board_classic.s</source_file>
+                <source_file filepath="true">draw_moves.s</source_file>
+                <source_file filepath="true">draw_o.c</source_file>
+                <source_file filepath="true">draw_pixel.s</source_file>
+                <source_file filepath="true">draw_screen.s</source_file>
+                <source_file filepath="true">draw_x.c</source_file>
+                <source_file filepath="true">init_mouse.s</source_file>
+                <source_file filepath="true">main_c.c</source_file>
+                <source_file filepath="true">nios_macros.s</source_file>
+                <source_file filepath="true">on_button.c</source_file>
+                <source_file filepath="true">onBox0.s</source_file>
+                <source_file filepath="true">onBox1.s</source_file>
+                <source_file filepath="true">onBox2.s</source_file>
+                <source_file filepath="true">onBox3.s</source_file>
+                <source_file filepath="true">onBox4.s</source_file>
+                <source_file filepath="true">onBox5.s</source_file>
+                <source_file filepath="true">onBox6.s</source_file>
+                <source_file filepath="true">onBox7.s</source_file>
+                <source_file filepath="true">onBox8.s</source_file>
+                <source_file filepath="true">onClassic_assembly.s</source_file>
+                <source_file filepath="true">onTimed_assembly.s</source_file>
+                <source_file filepath="true">robot_first.c</source_file>
+                <source_file filepath="true">robot_won.s</source_file>
+                <source_file filepath="true">timer.s</source_file>
+                <source_file filepath="true">timer_interrupt.s</source_file>
+                <source_file filepath="true">virtual_tic_tac_toe.s</source_file>
+                <source_file filepath="true">welcome.s</source_file>
+            </source_files>
+            <compiler_flags>-g -O1 -ffunction-sections -fverbose-asm -fno-inline</compiler_flags>
+            <emulate_unimpl_instructions>true</emulate_unimpl_instructions>
+            <use_small_c_library>false</use_small_c_library>
+        </options>
+    </program>
+</nios2_config>
